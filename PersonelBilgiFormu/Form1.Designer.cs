@@ -34,14 +34,9 @@
             lboxPersoneller = new ListBox();
             label2 = new Label();
             splitContainer1 = new SplitContainer();
+            btnYeni = new Button();
             chkPaz = new CheckBox();
             chkCmt = new CheckBox();
-            toolStrip1 = new ToolStrip();
-            StripButtonSave = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            StripButtonDownload = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            StripButtonDelete = new ToolStripButton();
             rdPartTime = new RadioButton();
             rdStajyer = new RadioButton();
             rdKadrolu = new RadioButton();
@@ -61,6 +56,11 @@
             label3 = new Label();
             cBoxCalisanTipi = new ComboBox();
             cBoxCinsiyet = new ComboBox();
+            toolStrip1 = new ToolStrip();
+            StripButtonSave = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            StripButtonDelete = new ToolStripButton();
+            btnEkleGuncelle = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -78,7 +78,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -99,7 +98,7 @@
             lboxPersoneller.Name = "lboxPersoneller";
             lboxPersoneller.Size = new Size(266, 415);
             lboxPersoneller.TabIndex = 2;
-            lboxPersoneller.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            lboxPersoneller.SelectedIndexChanged += lboxPersoneller_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -111,7 +110,6 @@
             label2.Size = new Size(183, 35);
             label2.TabIndex = 3;
             label2.Text = "Personel Listesi";
-            label2.Click += label2_Click;
             // 
             // splitContainer1
             // 
@@ -121,6 +119,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(btnYeni);
             splitContainer1.Panel1.Controls.Add(lboxPersoneller);
             splitContainer1.Panel1.Controls.Add(label2);
             // 
@@ -128,7 +127,6 @@
             // 
             splitContainer1.Panel2.Controls.Add(chkPaz);
             splitContainer1.Panel2.Controls.Add(chkCmt);
-            splitContainer1.Panel2.Controls.Add(toolStrip1);
             splitContainer1.Panel2.Controls.Add(label1);
             splitContainer1.Panel2.Controls.Add(rdPartTime);
             splitContainer1.Panel2.Controls.Add(rdStajyer);
@@ -150,9 +148,23 @@
             splitContainer1.Panel2.Controls.Add(cBoxCalisanTipi);
             splitContainer1.Panel2.Controls.Add(cBoxCinsiyet);
             splitContainer1.Panel2.Controls.Add(pictureBox1);
+            splitContainer1.Panel2.Controls.Add(toolStrip1);
+            splitContainer1.Panel2.Controls.Add(btnEkleGuncelle);
             splitContainer1.Size = new Size(800, 450);
             splitContainer1.SplitterDistance = 266;
             splitContainer1.TabIndex = 4;
+            // 
+            // btnYeni
+            // 
+            btnYeni.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
+            btnYeni.Location = new Point(57, 411);
+            btnYeni.Name = "btnYeni";
+            btnYeni.Size = new Size(136, 27);
+            btnYeni.TabIndex = 11;
+            btnYeni.Text = "YENİ PERSONEL";
+            btnYeni.UseMnemonic = false;
+            btnYeni.UseVisualStyleBackColor = true;
+            btnYeni.Click += btnYeni_Click;
             // 
             // chkPaz
             // 
@@ -173,55 +185,6 @@
             chkCmt.TabIndex = 9;
             chkCmt.Text = "Cumartesi";
             chkCmt.UseVisualStyleBackColor = true;
-            chkCmt.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.Dock = DockStyle.Bottom;
-            toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { StripButtonSave, toolStripSeparator1, StripButtonDownload, toolStripSeparator2, StripButtonDelete });
-            toolStrip1.Location = new Point(0, 411);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(153, 39);
-            toolStrip1.TabIndex = 8;
-            toolStrip1.Text = "toolStrip1";
-            // 
-            // StripButtonSave
-            // 
-            StripButtonSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            StripButtonSave.Image = (Image)resources.GetObject("StripButtonSave.Image");
-            StripButtonSave.ImageTransparentColor = Color.Magenta;
-            StripButtonSave.Name = "StripButtonSave";
-            StripButtonSave.Size = new Size(36, 36);
-            StripButtonSave.Text = "toolStripButton1";
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 39);
-            // 
-            // StripButtonDownload
-            // 
-            StripButtonDownload.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            StripButtonDownload.Image = (Image)resources.GetObject("StripButtonDownload.Image");
-            StripButtonDownload.ImageTransparentColor = Color.Magenta;
-            StripButtonDownload.Name = "StripButtonDownload";
-            StripButtonDownload.Size = new Size(36, 36);
-            StripButtonDownload.Text = "toolStripButton2";
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 39);
-            // 
-            // StripButtonDelete
-            // 
-            StripButtonDelete.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            StripButtonDelete.Image = (Image)resources.GetObject("StripButtonDelete.Image");
-            StripButtonDelete.ImageTransparentColor = Color.Magenta;
-            StripButtonDelete.Name = "StripButtonDelete";
-            StripButtonDelete.Size = new Size(36, 36);
-            StripButtonDelete.Text = "toolStripButton3";
             // 
             // rdPartTime
             // 
@@ -237,7 +200,7 @@
             // rdStajyer
             // 
             rdStajyer.AutoSize = true;
-            rdStajyer.Location = new Point(16, 358);
+            rdStajyer.Location = new Point(42, 349);
             rdStajyer.Name = "rdStajyer";
             rdStajyer.Size = new Size(75, 24);
             rdStajyer.TabIndex = 7;
@@ -323,6 +286,7 @@
             txtCalistigiBirim.Name = "txtCalistigiBirim";
             txtCalistigiBirim.Size = new Size(422, 27);
             txtCalistigiBirim.TabIndex = 4;
+            txtCalistigiBirim.TextChanged += txtCalistigiBirim_TextChanged;
             // 
             // txtAdSoyad
             // 
@@ -330,7 +294,6 @@
             txtAdSoyad.Name = "txtAdSoyad";
             txtAdSoyad.Size = new Size(422, 27);
             txtAdSoyad.TabIndex = 3;
-            txtAdSoyad.TextChanged += txtAdSoyad_TextChanged;
             // 
             // label8
             // 
@@ -341,7 +304,6 @@
             label8.Size = new Size(149, 22);
             label8.TabIndex = 2;
             label8.Text = "Personel Durumu";
-            label8.Click += label8_Click;
             // 
             // label7
             // 
@@ -396,6 +358,7 @@
             // cBoxCalisanTipi
             // 
             cBoxCalisanTipi.FormattingEnabled = true;
+            cBoxCalisanTipi.Items.AddRange(new object[] { "Yonetici", "BeyazYaka", "GriYaka", "MaviYaka" });
             cBoxCalisanTipi.Location = new Point(9, 260);
             cBoxCalisanTipi.Name = "cBoxCalisanTipi";
             cBoxCalisanTipi.Size = new Size(284, 28);
@@ -404,10 +367,58 @@
             // cBoxCinsiyet
             // 
             cBoxCinsiyet.FormattingEnabled = true;
+            cBoxCinsiyet.Items.AddRange(new object[] { "Kadın", "Erkek", "NonBinary" });
             cBoxCinsiyet.Location = new Point(9, 204);
             cBoxCinsiyet.Name = "cBoxCinsiyet";
             cBoxCinsiyet.Size = new Size(284, 28);
             cBoxCinsiyet.TabIndex = 1;
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.Dock = DockStyle.None;
+            toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
+            toolStrip1.ImageScalingSize = new Size(32, 32);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { StripButtonSave, toolStripSeparator1, StripButtonDelete });
+            toolStrip1.Location = new Point(26, 402);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(81, 39);
+            toolStrip1.TabIndex = 8;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // StripButtonSave
+            // 
+            StripButtonSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            StripButtonSave.Image = (Image)resources.GetObject("StripButtonSave.Image");
+            StripButtonSave.ImageTransparentColor = Color.Magenta;
+            StripButtonSave.Name = "StripButtonSave";
+            StripButtonSave.Size = new Size(36, 36);
+            StripButtonSave.Text = "toolStripButton1";
+            StripButtonSave.Click += tsbKaydet_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 39);
+            // 
+            // StripButtonDelete
+            // 
+            StripButtonDelete.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            StripButtonDelete.Image = (Image)resources.GetObject("StripButtonDelete.Image");
+            StripButtonDelete.ImageTransparentColor = Color.Magenta;
+            StripButtonDelete.Name = "StripButtonDelete";
+            StripButtonDelete.Size = new Size(36, 36);
+            StripButtonDelete.Text = "toolStripButton3";
+            // 
+            // btnEkleGuncelle
+            // 
+            btnEkleGuncelle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnEkleGuncelle.Location = new Point(121, 405);
+            btnEkleGuncelle.Name = "btnEkleGuncelle";
+            btnEkleGuncelle.Size = new Size(204, 36);
+            btnEkleGuncelle.TabIndex = 11;
+            btnEkleGuncelle.Text = "EKLE/GUNCELLE";
+            btnEkleGuncelle.UseVisualStyleBackColor = true;
+            btnEkleGuncelle.Click += btnEkleGuncelle_Click;
             // 
             // Form1
             // 
@@ -459,9 +470,9 @@
         private ToolStripButton StripButtonSave;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton StripButtonDelete;
-        private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton StripButtonDownload;
         private CheckBox chkCmt;
         private CheckBox chkPaz;
+        private Button btnEkleGuncelle;
+        private Button btnYeni;
     }
 }

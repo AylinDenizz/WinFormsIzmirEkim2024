@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonelBilgiFormu
 {
-    public enum Cinsiyet { Erkek = 0, Kadın = 1 };
+    public enum Cinsiyet { Erkek = 0, Kadın = 1, NonBinary = 2 };
     public enum CalısanTipi { Yonetici = 0, BeyazYaka = 1, GriYaka = 2, MaviYaka = 3 };
 
     [Flags]

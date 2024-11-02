@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYQSURBVFhHtZd5
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYQSURBVFhHtZd5
         UJRlHMcpp5qx/uqcmv6u/sxmaoBlF8xrYgDBBIVSLAsJWS4P5FoWVDwgBAdUEhGV5b7k2ESkFERAYdld
         5TA0GwPBE5XL5Pj2e95939138Y1Q6zfzHWb3+T3fz3ff59jF5lnK1dYzyvlTj94ln7iNe8i/eug1f/U9
         Up/X575JfMv/Uyj0nOMh87i66GMXMC2VrQCBzfJZuOqO93zfCLVa/SI/5b8pXJB9ONFsdyB+rfNfAnzx
@@ -166,16 +166,6 @@
         Y/Hr2m/ncPgGmj0suKJRsvsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="StripButtonDownload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD5SURBVFhH7de9asJQGMbxXIVQdSjtUKpDhy4d7NBbEDpL
-        L1Sc9QYcCg6lhUopiGiXFur/CQmEw4sE43scPA/8IJx8PCchHyRLOTAdDPFc0LLGokRFK/wHNNaGe3S2
-        YXlJ69yjS26Vi9a5J00gTeD8JjCBVVbHGI0zhXXwOrRv47Qwh1WwzysucJR0sYBVZHnDJY6aa3zAKqxa
-        4gYu0YE/YRXLF/pwzR2+EZbrc3yPKHnAGmX5Fo+ImgE2+MGTBk6R20JKo+ixmeEP1bvak7rU2UO+YG0U
-        Q/6tiHnmIXXXer16eUf2gt9iICZ1jpDnCtVfLW/qUufZJ8t2ARc52vxzFksAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="StripButtonDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -185,4 +175,7 @@
         l5EQZmQldcNTA1YsAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

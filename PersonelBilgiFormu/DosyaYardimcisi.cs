@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace PersonelBilgiFormu
 {
@@ -16,7 +17,7 @@ namespace PersonelBilgiFormu
             if (File.Exists(dosya))
             {
                 string veriler = File.ReadAllText(dosya);
-                List<Personel> l = System.Text.Json.JsonSerializer.Deserialize<List<Personel>>(veriler);
+                List<Personel> l = JsonSerializer.Deserialize<List<Personel>>(veriler);
 
                 liste = l;
             }
@@ -31,7 +32,7 @@ namespace PersonelBilgiFormu
 
         public static void VerileriKaydet() {
 
-            string veri = System.Text.Json.JsonSerializer.Serialize(liste);
+            string veri = JsonSerializer.Serialize(liste);
 
             File.WriteAllText(dosya, veri);
 
@@ -43,12 +44,24 @@ namespace PersonelBilgiFormu
 
         }
 
-        public static void PersonelEkle(Personel personel) {
+        public static void PersonelEkle(Personel personel)
+        {
+            if (liste.Count > 0)
+            {
+                Personel sonPers = liste[liste.Count - 1];
+
+                if (sonPers == null)
+                    personel.Id = 1;
+                else
+                    personel.Id = sonPers.Id + 1;
+            }
+            else
+                personel.Id = 1;
+
             liste.Add(personel);
         }
 
 
-        //kendi tasarımım için lazım 
-        public static void VerileriYazdır() { }
+    
     }
 }
