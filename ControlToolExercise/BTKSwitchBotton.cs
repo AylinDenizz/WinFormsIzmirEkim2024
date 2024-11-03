@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControlToolExercise
 {
-    internal class BTKSwitchBotton : Control
+    public class BTKSwitchBotton : Control
     {
         public BTKSwitchBotton() { }
 
@@ -20,6 +20,11 @@ namespace ControlToolExercise
 
             SolidBrush b = new SolidBrush(Color.Tomato);
             e.Graphics.FillEllipse(b, new Rectangle(100, 30, 50, 50));
+
+            Image img = Properties.Resource.instagram;
+
+            e.Graphics.DrawImage(img, new Rectangle(150,20,90,90), new Rectangle(0,0,img.Width, img.Height),
+                GraphicsUnit.Pixel);
 
         }
     }
