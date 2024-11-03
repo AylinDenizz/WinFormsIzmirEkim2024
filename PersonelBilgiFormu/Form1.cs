@@ -2,9 +2,9 @@ using System;
 
 namespace PersonelBilgiFormu
 {
-    public partial class Form1 : Form
+    public partial class dsf : Form
     {
-        public Form1()
+        public dsf()
         {
             InitializeComponent();
             DosyaYardimcisi.VerileriYukle();

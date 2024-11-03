@@ -1,8 +1,8 @@
 namespace VKIuygulaması
 {
-    public partial class Form1 : Form
+    public partial class asdf : Form
     {
-        public Form1()
+        public asdf()
         {
             InitializeComponent();
         }

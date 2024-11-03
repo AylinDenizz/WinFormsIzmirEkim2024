@@ -1,6 +1,6 @@
 ﻿namespace PersonelBilgiFormu
 {
-    partial class Form1
+    partial class dsf
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dsf));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             lboxPersoneller = new ListBox();
@@ -420,13 +420,13 @@
             btnEkleGuncelle.UseVisualStyleBackColor = true;
             btnEkleGuncelle.Click += btnEkleGuncelle_Click;
             // 
-            // Form1
+            // dsf
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(splitContainer1);
-            Name = "Form1";
+            Name = "dsf";
             Text = "Personel Bilgi Formu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             splitContainer1.Panel1.ResumeLayout(false);

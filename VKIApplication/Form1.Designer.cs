@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace IlkUygulama
 {
-    partial class Form1
+    partial class asdf
     {
         /// <summary>
         ///  Required designer variable.
@@ -54,7 +54,7 @@ namespace IlkUygulama
             txtAdSoyad.Size = new Size(208, 27);
             txtAdSoyad.TabIndex = 1;
             // 
-            // Form1
+            // asdf
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -62,8 +62,9 @@ namespace IlkUygulama
             ClientSize = new Size(383, 229);
             Controls.Add(txtAdSoyad);
             Controls.Add(btnTikla);
-            Name = "Form1";
+            Name = "asdf";
             Text = "BtkAkademi - İlk Form Projesi";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

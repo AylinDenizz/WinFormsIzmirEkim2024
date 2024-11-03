@@ -1,8 +1,8 @@
 namespace IlkUygulama
 {
-    public partial class Form1 : Form
+    public partial class asdf : Form
     {
-        public Form1()//yapýcý metot
+        public asdf()//yapýcý metot
         {
             InitializeComponent();
         }
@@ -15,6 +15,9 @@ namespace IlkUygulama
             MessageBox.Show($"Merhaba, {adSoyad}");
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

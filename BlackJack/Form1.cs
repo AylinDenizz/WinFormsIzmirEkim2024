@@ -258,6 +258,21 @@ namespace BlackJack
         {
 
         }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            panel4.Location = new Point((Width - panel1.Width) / 2, (Height - panel1.Height) / 2);
+        }
+
+        private void pnlOyuncu2_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

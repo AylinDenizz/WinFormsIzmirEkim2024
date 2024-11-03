@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace VKIuygulaması
 {
-    partial class Form1
+    partial class asdf
     {
         /// <summary>
         ///  Required designer variable.
@@ -100,7 +100,7 @@ namespace VKIuygulaması
             label5.ForeColor = Color.Red;
             label5.Location = new Point(22, 113);
             label5.Name = "label5";
-            label5.Size = new Size(337, 56);
+            label5.Size = new Size(260, 40);
             label5.TabIndex = 1;
             label5.Text = "Console.WriteLine(\"\") --> Label gibi\r\nConsole.ReadLine(\"\") --> TextBox gibi";
             // 
@@ -120,7 +120,7 @@ namespace VKIuygulaması
             lblSonuc.AutoSize = true;
             lblSonuc.Location = new Point(22, 275);
             lblSonuc.Name = "lblSonuc";
-            lblSonuc.Size = new Size(111, 28);
+            lblSonuc.Size = new Size(85, 20);
             lblSonuc.TabIndex = 4;
             lblSonuc.Text = "VKİ DEĞERİ";
             // 
@@ -129,11 +129,11 @@ namespace VKIuygulaması
             lblDurum.AutoSize = true;
             lblDurum.Location = new Point(22, 313);
             lblDurum.Name = "lblDurum";
-            lblDurum.Size = new Size(132, 28);
+            lblDurum.Size = new Size(98, 20);
             lblDurum.TabIndex = 4;
             lblDurum.Text = "VKI DURUMU";
             // 
-            // Form1
+            // asdf
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -149,7 +149,7 @@ namespace VKIuygulaması
             Controls.Add(label1);
             Controls.Add(txtKilo);
             Controls.Add(txtBoy);
-            Name = "Form1";
+            Name = "asdf";
             Text = "Vücut Kitle Endeksi";
             ResumeLayout(false);
             PerformLayout();

@@ -56,18 +56,21 @@
             btnSkorlar = new Button();
             btnBaslat = new Button();
             lblKazanan = new Label();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbDeste).BeginInit();
             panel3.SuspendLayout();
             pnlOyuncu2Butonlar.SuspendLayout();
             pnlOyuncu1Butonlar.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(lblDesteKartSayisi);
             panel1.Controls.Add(pbDeste);
-            panel1.Location = new Point(441, 15);
+            panel1.Location = new Point(526, 23);
             panel1.Name = "panel1";
             panel1.Size = new Size(103, 194);
             panel1.TabIndex = 0;
@@ -85,8 +88,9 @@
             // 
             // pbDeste
             // 
+            pbDeste.BorderStyle = BorderStyle.FixedSingle;
             pbDeste.Image = (Image)resources.GetObject("pbDeste.Image");
-            pbDeste.Location = new Point(0, 15);
+            pbDeste.Location = new Point(-3, 15);
             pbDeste.Name = "pbDeste";
             pbDeste.Size = new Size(103, 140);
             pbDeste.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -96,7 +100,7 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(13, 253);
+            panel2.Location = new Point(100, 304);
             panel2.Name = "panel2";
             panel2.Size = new Size(468, 190);
             panel2.TabIndex = 2;
@@ -105,7 +109,7 @@
             // 
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
-            panel3.Location = new Point(12, 465);
+            panel3.Location = new Point(99, 516);
             panel3.Name = "panel3";
             panel3.Size = new Size(238, 61);
             panel3.TabIndex = 0;
@@ -133,7 +137,7 @@
             label2.BackColor = Color.Green;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(12, 212);
+            label2.Location = new Point(99, 263);
             label2.Name = "label2";
             label2.Size = new Size(469, 38);
             label2.TabIndex = 1;
@@ -145,7 +149,7 @@
             pnlOyuncu2Butonlar.Controls.Add(btnPas2);
             pnlOyuncu2Butonlar.Controls.Add(btnKartCek2);
             pnlOyuncu2Butonlar.Enabled = false;
-            pnlOyuncu2Butonlar.Location = new Point(499, 465);
+            pnlOyuncu2Butonlar.Location = new Point(586, 516);
             pnlOyuncu2Butonlar.Name = "pnlOyuncu2Butonlar";
             pnlOyuncu2Butonlar.Size = new Size(238, 61);
             pnlOyuncu2Butonlar.TabIndex = 0;
@@ -173,17 +177,18 @@
             // 
             pnlOyuncu2.BorderStyle = BorderStyle.FixedSingle;
             pnlOyuncu2.Enabled = false;
-            pnlOyuncu2.Location = new Point(500, 253);
+            pnlOyuncu2.Location = new Point(587, 304);
             pnlOyuncu2.Name = "pnlOyuncu2";
             pnlOyuncu2.Size = new Size(468, 190);
             pnlOyuncu2.TabIndex = 2;
+            pnlOyuncu2.SizeChanged += pnlOyuncu2_SizeChanged;
             // 
             // lblOyuncu2
             // 
             lblOyuncu2.BackColor = Color.Green;
             lblOyuncu2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblOyuncu2.ForeColor = SystemColors.ButtonHighlight;
-            lblOyuncu2.Location = new Point(499, 212);
+            lblOyuncu2.Location = new Point(586, 263);
             lblOyuncu2.Name = "lblOyuncu2";
             lblOyuncu2.Size = new Size(469, 38);
             lblOyuncu2.TabIndex = 1;
@@ -195,7 +200,7 @@
             pnlOyuncu1Butonlar.Controls.Add(btnPas1);
             pnlOyuncu1Butonlar.Controls.Add(btnKartCek1);
             pnlOyuncu1Butonlar.Enabled = false;
-            pnlOyuncu1Butonlar.Location = new Point(9, 465);
+            pnlOyuncu1Butonlar.Location = new Point(96, 516);
             pnlOyuncu1Butonlar.Name = "pnlOyuncu1Butonlar";
             pnlOyuncu1Butonlar.Size = new Size(241, 61);
             pnlOyuncu1Butonlar.TabIndex = 0;
@@ -223,7 +228,7 @@
             // 
             pnlOyuncu1.BorderStyle = BorderStyle.FixedSingle;
             pnlOyuncu1.Enabled = false;
-            pnlOyuncu1.Location = new Point(10, 253);
+            pnlOyuncu1.Location = new Point(97, 304);
             pnlOyuncu1.Name = "pnlOyuncu1";
             pnlOyuncu1.Size = new Size(471, 190);
             pnlOyuncu1.TabIndex = 2;
@@ -233,7 +238,7 @@
             lblOyuncu1.BackColor = Color.Green;
             lblOyuncu1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblOyuncu1.ForeColor = SystemColors.ButtonHighlight;
-            lblOyuncu1.Location = new Point(9, 212);
+            lblOyuncu1.Location = new Point(96, 263);
             lblOyuncu1.Name = "lblOyuncu1";
             lblOyuncu1.Size = new Size(472, 38);
             lblOyuncu1.TabIndex = 1;
@@ -244,7 +249,7 @@
             // 
             button7.BackColor = Color.LightYellow;
             button7.Font = new Font("Stencil", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.Location = new Point(803, 30);
+            button7.Location = new Point(890, 81);
             button7.Name = "button7";
             button7.Size = new Size(140, 53);
             button7.TabIndex = 0;
@@ -255,7 +260,7 @@
             // 
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(331, 478);
+            label5.Location = new Point(418, 529);
             label5.Name = "label5";
             label5.Size = new Size(103, 25);
             label5.TabIndex = 1;
@@ -266,7 +271,7 @@
             // 
             lblOyuncu2Sayi.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblOyuncu2Sayi.ForeColor = SystemColors.ButtonHighlight;
-            lblOyuncu2Sayi.Location = new Point(821, 477);
+            lblOyuncu2Sayi.Location = new Point(908, 528);
             lblOyuncu2Sayi.Name = "lblOyuncu2Sayi";
             lblOyuncu2Sayi.Size = new Size(103, 25);
             lblOyuncu2Sayi.TabIndex = 1;
@@ -277,7 +282,7 @@
             // 
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(320, 478);
+            label7.Location = new Point(407, 529);
             label7.Name = "label7";
             label7.Size = new Size(103, 25);
             label7.TabIndex = 1;
@@ -288,7 +293,7 @@
             // 
             lblOyuncu1Sayi.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblOyuncu1Sayi.ForeColor = SystemColors.ButtonHighlight;
-            lblOyuncu1Sayi.Location = new Point(332, 478);
+            lblOyuncu1Sayi.Location = new Point(419, 529);
             lblOyuncu1Sayi.Name = "lblOyuncu1Sayi";
             lblOyuncu1Sayi.Size = new Size(103, 25);
             lblOyuncu1Sayi.TabIndex = 1;
@@ -299,7 +304,7 @@
             // 
             button3.BackColor = Color.LightYellow;
             button3.Font = new Font("Stencil", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(26, 30);
+            button3.Location = new Point(113, 81);
             button3.Name = "button3";
             button3.Size = new Size(140, 53);
             button3.TabIndex = 0;
@@ -310,7 +315,7 @@
             // 
             btnSkorlar.BackColor = Color.LightYellow;
             btnSkorlar.Font = new Font("Stencil", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSkorlar.Location = new Point(800, 30);
+            btnSkorlar.Location = new Point(887, 81);
             btnSkorlar.Name = "btnSkorlar";
             btnSkorlar.Size = new Size(140, 53);
             btnSkorlar.TabIndex = 0;
@@ -322,7 +327,7 @@
             // 
             btnBaslat.BackColor = Color.LightYellow;
             btnBaslat.Font = new Font("Stencil", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBaslat.Location = new Point(23, 30);
+            btnBaslat.Location = new Point(110, 81);
             btnBaslat.Name = "btnBaslat";
             btnBaslat.Size = new Size(140, 53);
             btnBaslat.TabIndex = 0;
@@ -336,47 +341,59 @@
             lblKazanan.BackColor = Color.DarkGreen;
             lblKazanan.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblKazanan.ForeColor = Color.Red;
-            lblKazanan.Location = new Point(141, 152);
+            lblKazanan.Location = new Point(228, 203);
             lblKazanan.Name = "lblKazanan";
             lblKazanan.Size = new Size(189, 46);
             lblKazanan.TabIndex = 3;
             lblKazanan.Text = "KAZANAN";
+            // 
+            // panel4
+            // 
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(lblOyuncu1Sayi);
+            panel4.Controls.Add(btnBaslat);
+            panel4.Controls.Add(lblKazanan);
+            panel4.Controls.Add(panel1);
+            panel4.Controls.Add(lblOyuncu2Sayi);
+            panel4.Controls.Add(panel3);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(panel2);
+            panel4.Controls.Add(label5);
+            panel4.Controls.Add(pnlOyuncu1Butonlar);
+            panel4.Controls.Add(lblOyuncu2);
+            panel4.Controls.Add(pnlOyuncu2Butonlar);
+            panel4.Controls.Add(pnlOyuncu1);
+            panel4.Controls.Add(btnSkorlar);
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(button3);
+            panel4.Controls.Add(lblOyuncu1);
+            panel4.Controls.Add(button7);
+            panel4.Controls.Add(pnlOyuncu2);
+            panel4.Location = new Point(12, 12);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1085, 612);
+            panel4.TabIndex = 4;
+            panel4.Paint += panel4_Paint;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGreen;
-            ClientSize = new Size(977, 538);
-            Controls.Add(lblOyuncu1Sayi);
-            Controls.Add(lblKazanan);
-            Controls.Add(lblOyuncu2Sayi);
-            Controls.Add(label7);
-            Controls.Add(label5);
-            Controls.Add(lblOyuncu2);
-            Controls.Add(btnBaslat);
-            Controls.Add(btnSkorlar);
-            Controls.Add(button3);
-            Controls.Add(button7);
-            Controls.Add(pnlOyuncu2);
-            Controls.Add(lblOyuncu1);
-            Controls.Add(label2);
-            Controls.Add(pnlOyuncu1);
-            Controls.Add(pnlOyuncu2Butonlar);
-            Controls.Add(pnlOyuncu1Butonlar);
-            Controls.Add(panel2);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
+            ClientSize = new Size(1113, 636);
+            Controls.Add(panel4);
             Name = "Form1";
             Text = "BlackJack";
             Load += Form1_Load;
+            SizeChanged += Form1_SizeChanged;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbDeste).EndInit();
             panel3.ResumeLayout(false);
             pnlOyuncu2Butonlar.ResumeLayout(false);
             pnlOyuncu1Butonlar.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -408,5 +425,6 @@
         private Button btnSkorlar;
         private Button btnBaslat;
         private Label lblKazanan;
+        private Panel panel4;
     }
 }
