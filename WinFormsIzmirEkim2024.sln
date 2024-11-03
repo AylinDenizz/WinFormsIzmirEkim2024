@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VKIuygulaması", "WinFormsI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ilkuygulama", "VKIApplication\ilkuygulama.csproj", "{DBA734FA-6A0B-43BB-A86F-093D6CA474FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonelBilgiFormu", "PersonelBilgiFormu\PersonelBilgiFormu.csproj", "{6A3A7EC9-4E0D-47F4-A862-A7F2B4872B88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonelBilgiFormu", "PersonelBilgiFormu\PersonelBilgiFormu.csproj", "{6A3A7EC9-4E0D-47F4-A862-A7F2B4872B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack", "BlackJack\BlackJack.csproj", "{6705D257-5C50-4621-A0EA-64ABCD6F117A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6A3A7EC9-4E0D-47F4-A862-A7F2B4872B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A3A7EC9-4E0D-47F4-A862-A7F2B4872B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A3A7EC9-4E0D-47F4-A862-A7F2B4872B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6705D257-5C50-4621-A0EA-64ABCD6F117A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6705D257-5C50-4621-A0EA-64ABCD6F117A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6705D257-5C50-4621-A0EA-64ABCD6F117A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6705D257-5C50-4621-A0EA-64ABCD6F117A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
