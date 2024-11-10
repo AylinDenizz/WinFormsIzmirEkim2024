@@ -27,10 +27,18 @@ namespace BtkCourseManagement
             colInstructor.DataSource = context.Instructors.ToList();
             colInstructor.DisplayMember = "AdSoyad";
             colInstructor.ValueMember = "Id";
+
+            GetCities();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private async void GetCities()
         {
+            List<City> sehirler = await TurkiyeAPI.SehirleriGetir();
+            colCity.DataSource = sehirler;
+            colCity.DisplayMember = "name";
+            colCity.ValueMember = "id";
+
+            TurkiyeAPI.GetDistricts(35);
 
         }
 
@@ -45,6 +53,23 @@ namespace BtkCourseManagement
             }
             context.SaveChanges();
             Close();
+        }
+
+        private async void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == colCity.Index)
+            {
+                int? id = (int?)dataGridView1.Rows[e.RowIndex].Cells[colCity.Index].Value;
+
+                dataGridView1.Rows[e.RowIndex].Cells[colDistrict.Index].Value = null;
+
+                if (id.HasValue)
+                {
+                    colDistrict.DataSource = await TurkiyeAPI.GetDistricts((int)id);
+                    colDistrict.DisplayMember = "name";
+                    colDistrict.ValueMember = "id";
+                }
+            }
         }
     }
 }

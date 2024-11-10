@@ -32,6 +32,7 @@
             dataGridView1 = new DataGridView();
             InstructorName = new DataGridViewTextBoxColumn();
             InstructorSurName = new DataGridViewTextBoxColumn();
+            colSil = new DataGridViewButtonColumn();
             panel1 = new Panel();
             btnSave = new Button();
             textBox1 = new TextBox();
@@ -44,13 +45,15 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { InstructorName, InstructorSurName });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { InstructorName, InstructorSurName, colSil });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 56);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(800, 394);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellPainting += dataGridView1_CellPainting;
             // 
             // InstructorName
             // 
@@ -68,6 +71,19 @@
             InstructorSurName.Name = "InstructorSurName";
             InstructorSurName.Width = 200;
             // 
+            // colSil
+            // 
+            colSil.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colSil.FlatStyle = FlatStyle.Flat;
+            colSil.HeaderText = "";
+            colSil.MinimumWidth = 6;
+            colSil.Name = "colSil";
+            colSil.Resizable = DataGridViewTriState.True;
+            colSil.SortMode = DataGridViewColumnSortMode.Automatic;
+            colSil.Text = "Sil";
+            colSil.ToolTipText = "Sil";
+            colSil.UseColumnTextForButtonValue = true;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.LightCoral;
@@ -82,7 +98,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(701, 9);
+            btnSave.Location = new Point(677, 9);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(56, 38);
             btnSave.TabIndex = 4;
@@ -136,5 +152,6 @@
         private PictureBox pictureBox1;
         private DataGridViewTextBoxColumn InstructorName;
         private DataGridViewTextBoxColumn InstructorSurName;
+        private DataGridViewButtonColumn colSil;
     }
 }

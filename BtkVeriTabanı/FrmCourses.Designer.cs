@@ -37,8 +37,8 @@
             CourseName = new DataGridViewTextBoxColumn();
             CourseDescription = new DataGridViewTextBoxColumn();
             CourseDate = new DataGridViewTextBoxColumn();
-            City = new DataGridViewComboBoxColumn();
-            District = new DataGridViewComboBoxColumn();
+            colCity = new DataGridViewComboBoxColumn();
+            colDistrict = new DataGridViewComboBoxColumn();
             Location = new DataGridViewTextBoxColumn();
             colInstructor = new DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -49,13 +49,14 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CourseName, CourseDescription, CourseDate, City, District, Location, colInstructor });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CourseName, CourseDescription, CourseDate, colCity, colDistrict, Location, colInstructor });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 56);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(800, 394);
+            dataGridView1.Size = new Size(929, 394);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             // 
             // panel1
             // 
@@ -66,9 +67,8 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 56);
+            panel1.Size = new Size(929, 56);
             panel1.TabIndex = 3;
-            panel1.Paint += panel1_Paint;
             // 
             // btnSave
             // 
@@ -125,21 +125,21 @@
             CourseDate.Name = "CourseDate";
             CourseDate.Width = 125;
             // 
-            // City
+            // colCity
             // 
-            City.DataPropertyName = "LocatedCity";
-            City.HeaderText = "City";
-            City.MinimumWidth = 6;
-            City.Name = "City";
-            City.Width = 125;
+            colCity.DataPropertyName = "LocatedCity";
+            colCity.HeaderText = "City";
+            colCity.MinimumWidth = 6;
+            colCity.Name = "colCity";
+            colCity.Width = 125;
             // 
-            // District
+            // colDistrict
             // 
-            District.DataPropertyName = "LocatedDistrict";
-            District.HeaderText = "District";
-            District.MinimumWidth = 6;
-            District.Name = "District";
-            District.Width = 125;
+            colDistrict.DataPropertyName = "LocatedDistrict";
+            colDistrict.HeaderText = "District";
+            colDistrict.MinimumWidth = 6;
+            colDistrict.Name = "colDistrict";
+            colDistrict.Width = 125;
             // 
             // Location
             // 
@@ -161,7 +161,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(929, 450);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Name = "FrmCourses";
@@ -183,8 +183,8 @@
         private DataGridViewTextBoxColumn CourseName;
         private DataGridViewTextBoxColumn CourseDescription;
         private DataGridViewTextBoxColumn CourseDate;
-        private DataGridViewComboBoxColumn City;
-        private DataGridViewComboBoxColumn District;
+        private DataGridViewComboBoxColumn colCity;
+        private DataGridViewComboBoxColumn colDistrict;
         private DataGridViewTextBoxColumn Location;
         private DataGridViewComboBoxColumn colInstructor;
     }
