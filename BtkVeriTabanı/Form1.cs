@@ -1,10 +1,24 @@
+using BtkCourseManagement;
+using BtkVeriTabanı.Db;
+using BtkVeriTabanı.Models;
+using System.ComponentModel;
+
 namespace BtkVeriTabanı
 {
-    public partial class Form1 : Form
+    public partial class Courses : Form
     {
-        public Form1()
+    
+
+        public Courses()
         {
             InitializeComponent();
+
+        }
+
+        private void tsbKurslar_Click(object sender, EventArgs e)
+        {
+            FrmCourses courses = new FrmCourses();
+            courses.ShowDialog();
         }
     }
 }
