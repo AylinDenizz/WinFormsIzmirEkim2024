@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCourses));
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
+            btnSave = new Button();
+            textBox1 = new TextBox();
+            pictureBox1 = new PictureBox();
             CourseName = new DataGridViewTextBoxColumn();
             CourseDescription = new DataGridViewTextBoxColumn();
             CourseDate = new DataGridViewTextBoxColumn();
             City = new DataGridViewComboBoxColumn();
             District = new DataGridViewComboBoxColumn();
             Location = new DataGridViewTextBoxColumn();
-            Instructor = new DataGridViewComboBoxColumn();
-            panel1 = new Panel();
-            textBox1 = new TextBox();
-            pictureBox1 = new PictureBox();
-            btnSave = new Button();
+            colInstructor = new DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,13 +49,57 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CourseName, CourseDescription, CourseDate, City, District, Location, Instructor });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CourseName, CourseDescription, CourseDate, City, District, Location, colInstructor });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 56);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(800, 394);
             dataGridView1.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightCoral;
+            panel1.Controls.Add(btnSave);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 56);
+            panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint;
+            // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(701, 9);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(56, 38);
+            btnSave.TabIndex = 4;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.LightCoral;
+            textBox1.Cursor = Cursors.No;
+            textBox1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            textBox1.Location = new Point(46, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(106, 41);
+            textBox1.TabIndex = 3;
+            textBox1.Text = "Courses";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(37, 39);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // CourseName
             // 
@@ -105,57 +149,13 @@
             Location.Name = "Location";
             Location.Width = 125;
             // 
-            // Instructor
+            // colInstructor
             // 
-            Instructor.DataPropertyName = "InstructorId";
-            Instructor.HeaderText = "Instructor";
-            Instructor.MinimumWidth = 6;
-            Instructor.Name = "Instructor";
-            Instructor.Width = 125;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LightCoral;
-            panel1.Controls.Add(btnSave);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 56);
-            panel1.TabIndex = 3;
-            panel1.Paint += panel1_Paint;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.LightCoral;
-            textBox1.Cursor = Cursors.No;
-            textBox1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            textBox1.Location = new Point(46, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(106, 41);
-            textBox1.TabIndex = 3;
-            textBox1.Text = "Courses";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 39);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
-            // btnSave
-            // 
-            btnSave.Location = new Point(701, 9);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(56, 38);
-            btnSave.TabIndex = 4;
-            btnSave.Text = "SAVE";
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
+            colInstructor.DataPropertyName = "InstructorId";
+            colInstructor.HeaderText = "Instructor";
+            colInstructor.MinimumWidth = 6;
+            colInstructor.Name = "colInstructor";
+            colInstructor.Width = 125;
             // 
             // FrmCourses
             // 
@@ -179,13 +179,13 @@
         private Panel panel1;
         private TextBox textBox1;
         private PictureBox pictureBox1;
+        private Button btnSave;
         private DataGridViewTextBoxColumn CourseName;
         private DataGridViewTextBoxColumn CourseDescription;
         private DataGridViewTextBoxColumn CourseDate;
         private DataGridViewComboBoxColumn City;
         private DataGridViewComboBoxColumn District;
         private DataGridViewTextBoxColumn Location;
-        private DataGridViewComboBoxColumn Instructor;
-        private Button btnSave;
+        private DataGridViewComboBoxColumn colInstructor;
     }
 }

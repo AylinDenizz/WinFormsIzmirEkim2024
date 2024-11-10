@@ -23,6 +23,10 @@ namespace BtkCourseManagement
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = bList;
+
+            colInstructor.DataSource = context.Instructors.ToList();
+            colInstructor.DisplayMember = "AdSoyad";
+            colInstructor.ValueMember = "Id";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
