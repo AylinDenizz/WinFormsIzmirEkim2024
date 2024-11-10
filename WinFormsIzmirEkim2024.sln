@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlToolExercise", "Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VectorApp", "VectorApp\VectorApp.csproj", "{30A35DF5-42E0-47FE-86B5-2A9C96B5E82C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BtkVeriTabanı", "BtkVeriTabanı\BtkVeriTabanı.csproj", "{F08C0BAF-6ED7-4211-92C3-B802A24FE027}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BtkCourseManagement", "BtkVeriTabanı\BtkCourseManagement.csproj", "{F08C0BAF-6ED7-4211-92C3-B802A24FE027}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -12,11 +12,11 @@ namespace BtkVeriTabanı.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public  DateTime CreatedDate { get; set; }
-        public int LocatedCity {  get; set; }
-        public int  LocatedDistrict {  get; set; }
-        public string CourseLocation {  get; set; }
-        public int CourseInstructor { get; set; }
-
+        public int? LocatedCity {  get; set; }
+        public int?  LocatedDistrict {  get; set; }
+        public string? CourseLocation {  get; set; }
+        public int InstructorId {get; set; }
+        public DbInstructor Instructor { get; set; }
         public DbCourse() { }
     }
 
