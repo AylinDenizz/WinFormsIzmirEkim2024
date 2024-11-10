@@ -69,10 +69,11 @@ namespace BtkCourseManagement
                 if (e.RowIndex < dataGridView1.RowCount - 1)
                 {
                     e.Graphics.DrawImage(Properties.Resources.delete,
-                        new Rectangle(e.CellBounds.Left + 5, e.CellBounds.Top + 3, 20, 20),
-                        new Rectangle(0, 0, 24, 24), GraphicsUnit.Pixel);
+                        new Rectangle(e.CellBounds.Left + 2, e.CellBounds.Top + 2, 20, 20),
+                        new Rectangle(0, 0, 32, 32), GraphicsUnit.Pixel);
                 }
 
+                e.Handled = true;
             }
         }
     }

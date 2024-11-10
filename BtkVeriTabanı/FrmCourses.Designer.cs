@@ -48,12 +48,16 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CourseName, CourseDescription, CourseDate, colCity, colDistrict, Location, colInstructor });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 56);
+            dataGridView1.Margin = new Padding(4);
+            dataGridView1.MinimumSize = new Size(50, 50);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowHeadersWidth = 20;
+            dataGridView1.ShowCellToolTips = false;
             dataGridView1.Size = new Size(929, 394);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
@@ -103,11 +107,12 @@
             // 
             // CourseName
             // 
+            CourseName.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             CourseName.DataPropertyName = "Name";
             CourseName.HeaderText = "Course Name";
             CourseName.MinimumWidth = 6;
             CourseName.Name = "CourseName";
-            CourseName.Width = 125;
+            CourseName.Width = 127;
             // 
             // CourseDescription
             // 
