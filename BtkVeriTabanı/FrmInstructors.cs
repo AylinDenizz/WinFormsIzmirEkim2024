@@ -12,31 +12,27 @@ using System.Windows.Forms;
 
 namespace BtkCourseManagement
 {
-    public partial class FrmCourses : Form
+    public partial class FrmInstructors : Form
     {
         BtkCourseDbContext context = new BtkCourseDbContext();
-        BindingList<DbCourse> bList;
-        public FrmCourses()
+        BindingList<DbInstructor> bList;
+        public FrmInstructors()
 
         {
-            bList = new BindingList<DbCourse>(context.Courses.ToList());
+            bList = new BindingList<DbInstructor>(context.Instructors.ToList());
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = bList;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+  
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            foreach (DbCourse course in bList)
+            foreach (DbInstructor instructor in bList)
             {
-                if (course.Id == 0)
+                if (instructor.Id == 0)
                 {
-                    context.Courses.Add(course);
+                    context.Instructors.Add(instructor);
                 }
             }
             context.SaveChanges();

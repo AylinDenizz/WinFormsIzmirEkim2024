@@ -7,7 +7,7 @@ namespace BtkVeriTabanı
 {
     public partial class Courses : Form
     {
-    
+
 
         public Courses()
         {
@@ -19,6 +19,13 @@ namespace BtkVeriTabanı
         {
             FrmCourses courses = new FrmCourses();
             courses.ShowDialog();
+        }
+
+        private void BtnInstructors_Click(object sender, EventArgs e)
+        {
+            FrmInstructors ınstructors = new FrmInstructors();
+            ınstructors.ShowDialog();
+
         }
     }
 }

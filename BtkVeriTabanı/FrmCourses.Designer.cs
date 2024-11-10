@@ -30,9 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCourses));
             dataGridView1 = new DataGridView();
+            CourseName = new DataGridViewTextBoxColumn();
+            CourseDescription = new DataGridViewTextBoxColumn();
+            CourseDate = new DataGridViewTextBoxColumn();
+            City = new DataGridViewComboBoxColumn();
+            District = new DataGridViewComboBoxColumn();
+            Location = new DataGridViewTextBoxColumn();
+            Instructor = new DataGridViewComboBoxColumn();
             panel1 = new Panel();
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
+            btnSave = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -41,6 +49,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CourseName, CourseDescription, CourseDate, City, District, Location, Instructor });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 56);
             dataGridView1.Name = "dataGridView1";
@@ -48,9 +57,66 @@
             dataGridView1.Size = new Size(800, 394);
             dataGridView1.TabIndex = 4;
             // 
+            // CourseName
+            // 
+            CourseName.DataPropertyName = "Name";
+            CourseName.HeaderText = "Course Name";
+            CourseName.MinimumWidth = 6;
+            CourseName.Name = "CourseName";
+            CourseName.Width = 125;
+            // 
+            // CourseDescription
+            // 
+            CourseDescription.DataPropertyName = "Description";
+            CourseDescription.HeaderText = "Description";
+            CourseDescription.MinimumWidth = 6;
+            CourseDescription.Name = "CourseDescription";
+            CourseDescription.Width = 125;
+            // 
+            // CourseDate
+            // 
+            CourseDate.DataPropertyName = "CreatedDate";
+            CourseDate.HeaderText = "Date";
+            CourseDate.MinimumWidth = 6;
+            CourseDate.Name = "CourseDate";
+            CourseDate.Width = 125;
+            // 
+            // City
+            // 
+            City.DataPropertyName = "LocatedCity";
+            City.HeaderText = "City";
+            City.MinimumWidth = 6;
+            City.Name = "City";
+            City.Width = 125;
+            // 
+            // District
+            // 
+            District.DataPropertyName = "LocatedDistrict";
+            District.HeaderText = "District";
+            District.MinimumWidth = 6;
+            District.Name = "District";
+            District.Width = 125;
+            // 
+            // Location
+            // 
+            Location.DataPropertyName = "CourseLocation";
+            Location.HeaderText = "Location";
+            Location.MinimumWidth = 6;
+            Location.Name = "Location";
+            Location.Width = 125;
+            // 
+            // Instructor
+            // 
+            Instructor.DataPropertyName = "InstructorId";
+            Instructor.HeaderText = "Instructor";
+            Instructor.MinimumWidth = 6;
+            Instructor.Name = "Instructor";
+            Instructor.Width = 125;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.LightCoral;
+            panel1.Controls.Add(btnSave);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
@@ -81,6 +147,16 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(701, 9);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(56, 38);
+            btnSave.TabIndex = 4;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
             // FrmCourses
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -103,5 +179,13 @@
         private Panel panel1;
         private TextBox textBox1;
         private PictureBox pictureBox1;
+        private DataGridViewTextBoxColumn CourseName;
+        private DataGridViewTextBoxColumn CourseDescription;
+        private DataGridViewTextBoxColumn CourseDate;
+        private DataGridViewComboBoxColumn City;
+        private DataGridViewComboBoxColumn District;
+        private DataGridViewTextBoxColumn Location;
+        private DataGridViewComboBoxColumn Instructor;
+        private Button btnSave;
     }
 }

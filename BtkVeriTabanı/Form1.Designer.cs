@@ -34,14 +34,14 @@
             toolStripSeparator1 = new ToolStripSeparator();
             tsbKurslar = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
-            toolStripButton3 = new ToolStripButton();
+            BtnInstructors = new ToolStripButton();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSeparator1, tsbKurslar, toolStripSeparator2, toolStripButton3 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSeparator1, tsbKurslar, toolStripSeparator2, BtnInstructors });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 39);
@@ -77,14 +77,15 @@
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 39);
             // 
-            // toolStripButton3
+            // BtnInstructors
             // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(36, 36);
-            toolStripButton3.Text = "toolStripButton3";
+            BtnInstructors.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            BtnInstructors.Image = (Image)resources.GetObject("BtnInstructors.Image");
+            BtnInstructors.ImageTransparentColor = Color.Magenta;
+            BtnInstructors.Name = "BtnInstructors";
+            BtnInstructors.Size = new Size(36, 36);
+            BtnInstructors.Text = "toolStripButton3";
+            BtnInstructors.Click += BtnInstructors_Click;
             // 
             // Courses
             // 
@@ -107,6 +108,6 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton tsbKurslar;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton toolStripButton3;
+        private ToolStripButton BtnInstructors;
     }
 }
