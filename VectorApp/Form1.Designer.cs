@@ -76,6 +76,7 @@
             numCizgiKalinlik.Name = "numCizgiKalinlik";
             numCizgiKalinlik.Size = new Size(52, 27);
             numCizgiKalinlik.TabIndex = 2;
+            numCizgiKalinlik.ValueChanged += numCizgiKalinlik_ValueChanged;
             // 
             // label2
             // 

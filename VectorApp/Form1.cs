@@ -43,5 +43,10 @@ namespace VectorApp
                 btnRenk1.BackColor = dialog.Color;
             }
         }
+
+        private void numCizgiKalinlik_ValueChanged(object sender, EventArgs e)
+        {
+            canvas1.CizgiKalinligi = 
+        }
     }
 }
