@@ -1,5 +1,5 @@
-﻿using BtkVeriTabanı.Db;
-using BtkVeriTabanı.Models;
+﻿using BtkCourseManagement.Db;
+using BtkCourseManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

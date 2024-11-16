@@ -1,4 +1,4 @@
-﻿namespace BtkVeriTabanı
+﻿namespace BtkCourseManagement
 {
     partial class Courses
     {
@@ -35,13 +35,15 @@
             tsbKurslar = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             BtnInstructors = new ToolStripButton();
+            tsbUser = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSeparator1, tsbKurslar, toolStripSeparator2, BtnInstructors });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSeparator1, tsbKurslar, toolStripSeparator2, BtnInstructors, toolStripSeparator3, tsbUser });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 39);
@@ -87,6 +89,22 @@
             BtnInstructors.Text = "toolStripButton3";
             BtnInstructors.Click += BtnInstructors_Click;
             // 
+            // tsbUser
+            // 
+            tsbUser.AccessibleRole = AccessibleRole.StaticText;
+            tsbUser.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbUser.Image = (Image)resources.GetObject("tsbUser.Image");
+            tsbUser.ImageAlign = ContentAlignment.MiddleRight;
+            tsbUser.ImageTransparentColor = Color.Magenta;
+            tsbUser.Name = "tsbUser";
+            tsbUser.Size = new Size(36, 36);
+            tsbUser.Text = "tsbUser";
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 39);
+            // 
             // Courses
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -109,5 +127,7 @@
         private ToolStripButton tsbKurslar;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton BtnInstructors;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton tsbUser;
     }
 }

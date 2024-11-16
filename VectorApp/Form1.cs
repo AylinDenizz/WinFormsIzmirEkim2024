@@ -44,9 +44,6 @@ namespace VectorApp
             }
         }
 
-        private void numCizgiKalinlik_ValueChanged(object sender, EventArgs e)
-        {
-            canvas1.CizgiKalinligi = 
-        }
+        
     }
 }

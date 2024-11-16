@@ -1,4 +1,4 @@
-namespace BtkVeriTabanı
+namespace BtkCourseManagement
 {
     internal static class Program
     {

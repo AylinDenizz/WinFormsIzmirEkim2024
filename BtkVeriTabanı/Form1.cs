@@ -1,9 +1,9 @@
 using BtkCourseManagement;
-using BtkVeriTabanı.Db;
-using BtkVeriTabanı.Models;
+using BtkCourseManagement.Db;
+using BtkCourseManagement.Models;
 using System.ComponentModel;
 
-namespace BtkVeriTabanı
+namespace BtkCourseManagement
 {
     public partial class Courses : Form
     {

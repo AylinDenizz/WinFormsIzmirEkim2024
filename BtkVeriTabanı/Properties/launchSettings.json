@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "BtkVeriTabanı": {
+    "BtkCourseManagement": {
       "commandName": "Project",
       "sqlDebugging": true,
       "nativeDebugging": true,
